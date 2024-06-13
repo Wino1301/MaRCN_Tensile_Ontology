@@ -3,29 +3,29 @@
 @prefix tto: <https://w3id.org/pmd/tto/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://example.org/tensile_test_1> a tto:TensileTest ;
-    core:MaterialDesignation "Steel 1018"^^xsd:string ;
-    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Steel_1018/Tensile_8.csv"^^xsd:string ;
-    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Steel_1018/Tensile_8.csv"^^xsd:string ;
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061/Tensile_001> a tto:TensileTest ;
+    core:MaterialDesignation "Aluminium_6061"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Aluminium_6061/Tensile_001"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Aluminium_6061/Tensile_001"^^xsd:string ;
     tto:OriginalGaugeLength [ a core:ValueObject ;
             rdf:value "50"^^xsd:float ;
             core:unit <https://w3id.org/pmd/co/unit#mm> ] ;
     tto:OriginalThickness [ a core:ValueObject ;
-            rdf:value "3.18"^^xsd:float ;
+            rdf:value "3.09"^^xsd:float ;
             core:unit <https://w3id.org/pmd/co/unit#mm> ] ;
     tto:OriginalWidth [ a core:ValueObject ;
-            rdf:value "13.46"^^xsd:float ;
+            rdf:value "13.49"^^xsd:float ;
             core:unit <https://w3id.org/pmd/co/unit#mm> ] ;
     tto:PercentageExtension [ a core:ValueObject ;
-            rdf:value "0.3004"^^xsd:float ;
+            rdf:value "0.2"^^xsd:float ;
             core:unit <https://w3id.org/pmd/co/unit#percent> ] ;
     tto:UltimateTensileStrength [ a core:ValueObject ;
-            rdf:value "272.7"^^xsd:float ;
+            rdf:value "246.5"^^xsd:float ;
             core:unit <https://w3id.org/pmd/co/unit#MPa> ] ;
     tto:YieldStrength [ a core:ValueObject ;
-            rdf:value "198.946"^^xsd:float ;
+            rdf:value "189.014"^^xsd:float ;
             core:unit <https://w3id.org/pmd/co/unit#MPa> ] ;
     tto:YoungsModulus [ a core:ValueObject ;
-            rdf:value "87986.0"^^xsd:float ;
+            rdf:value "55704.0"^^xsd:float ;
             core:unit <https://w3id.org/pmd/co/unit#MPa> ] .
 
