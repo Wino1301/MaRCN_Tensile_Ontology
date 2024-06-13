@@ -1,0 +1,15 @@
+Results for Tensile_002 in Aluminium_6061
+
+Length:50
+Width:13.59
+Thickness:3.15
+Units: MPa
+Young's Modulus = 56336 MPa
+Proportional Limit = 137.92 MPa
+0.2% Yield Strength = 160.378MPa
+Modulus of Resilience at Proportional Limit = 0.169 MPa
+Strain Energy Density at 0.2% Offset = 0.228 MPa
+Modulus of Toughness = 27.177 MPa
+UTS=234.4 MPa
+ef=0.1298
+er=0.1262

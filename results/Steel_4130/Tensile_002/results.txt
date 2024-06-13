@@ -1,0 +1,15 @@
+Results for Tensile_002 in Steel_4130
+
+Length:50
+Width:13.48
+Thickness:3.19
+Units: MPa
+Young's Modulus = 140602 MPa
+Proportional Limit = 233.55 MPa
+0.2% Yield Strength = 281.078MPa
+Modulus of Resilience at Proportional Limit = 0.194 MPa
+Strain Energy Density at 0.2% Offset = 0.281 MPa
+Modulus of Toughness = 125.056 MPa
+UTS=506.0 MPa
+ef=0.2823
+er=0.2823

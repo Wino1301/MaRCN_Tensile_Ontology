@@ -1,0 +1,31 @@
+@prefix core: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tto: <https://w3id.org/pmd/tto/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061/Tensile_004> a tto:TensileTest ;
+    core:MaterialDesignation "Aluminium_6061"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Aluminium_6061/Tensile_004.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Aluminium_6061/Tensile_004.csv"^^xsd:string ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.194"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.63"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "0.1727"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#percent> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "227.7"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "142.127"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "49341.0"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#MPa> ] .
+

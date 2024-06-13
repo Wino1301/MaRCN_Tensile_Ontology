@@ -1,0 +1,15 @@
+Results for Tensile_006 in Brass
+
+Length:50
+Width:13.506
+Thickness:3.143
+Units: psi
+Young's Modulus = 11217442 psi
+Proportional Limit = 34816.93 psi
+0.2% Yield Strength = 41186.18psi
+Modulus of Resilience at Proportional Limit = 54.033 psi
+Strain Energy Density at 0.2% Offset = 75.61 psi
+Modulus of Toughness = 15667.843 psi
+UTS=62815.5 psi
+ef=0.2839
+er=0.279

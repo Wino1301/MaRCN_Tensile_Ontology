@@ -1,0 +1,15 @@
+Results for Tensile_003 in Brass
+
+Length:50
+Width:13.43
+Thickness:3.23
+Units: MPa
+Young's Modulus = 84768 MPa
+Proportional Limit = 295.46 MPa
+0.2% Yield Strength = 357.794MPa
+Modulus of Resilience at Proportional Limit = 0.515 MPa
+Strain Energy Density at 0.2% Offset = 0.755 MPa
+Modulus of Toughness = 130.359 MPa
+UTS=535.5 MPa
+ef=0.2768
+er=0.2713
