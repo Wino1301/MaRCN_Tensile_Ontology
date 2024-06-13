@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "n58a39901292c47b1bac2941a84df6c4fb1", "label": "n58a39901292c47b1bac2941a84df6c4fb1", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/co/ValueObject", "label": "https://w3id.org/pmd/co/ValueObject", "shape": "dot"}, {"color": "#97c2fc", "id": "n58a39901292c47b1bac2941a84df6c4fb7", "label": "n58a39901292c47b1bac2941a84df6c4fb7", "shape": "dot"}, {"color": "#97c2fc", "id": "200.0", "label": "200.0", "shape": "dot"}, {"color": "#97c2fc", "id": "https://example.org/tensile_test_1", "label": "https://example.org/tensile_test_1", "shape": "dot"}, {"color": "#97c2fc", "id": "Secondary data example", "label": "Secondary data example", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/co/unit#mm", "label": "https://w3id.org/pmd/co/unit#mm", "shape": "dot"}, {"color": "#97c2fc", "id": "100.0", "label": "100.0", "shape": "dot"}, {"color": "#97c2fc", "id": "n58a39901292c47b1bac2941a84df6c4fb5", "label": "n58a39901292c47b1bac2941a84df6c4fb5", "shape": "dot"}, {"color": "#97c2fc", "id": "n58a39901292c47b1bac2941a84df6c4fb4", "label": "n58a39901292c47b1bac2941a84df6c4fb4", "shape": "dot"}, {"color": "#97c2fc", "id": "0.15", "label": "0.15", "shape": "dot"}, {"color": "#97c2fc", "id": "n58a39901292c47b1bac2941a84df6c4fb3", "label": "n58a39901292c47b1bac2941a84df6c4fb3", "shape": "dot"}, {"color": "#97c2fc", "id": "n58a39901292c47b1bac2941a84df6c4fb2", "label": "n58a39901292c47b1bac2941a84df6c4fb2", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/tto/TensileTest", "label": "https://w3id.org/pmd/tto/TensileTest", "shape": "dot"}, {"color": "#97c2fc", "id": "10.0", "label": "10.0", "shape": "dot"}, {"color": "#97c2fc", "id": "1.0", "label": "1.0", "shape": "dot"}, {"color": "#97c2fc", "id": "n58a39901292c47b1bac2941a84df6c4fb6", "label": "n58a39901292c47b1bac2941a84df6c4fb6", "shape": "dot"}, {"color": "#97c2fc", "id": "150.0", "label": "150.0", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/co/unit#MPa", "label": "https://w3id.org/pmd/co/unit#MPa", "shape": "dot"}, {"color": "#97c2fc", "id": "Steel", "label": "Steel", "shape": "dot"}, {"color": "#97c2fc", "id": "Primary data example", "label": "Primary data example", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/co/unit#percent", "label": "https://w3id.org/pmd/co/unit#percent", "shape": "dot"}, {"color": "#97c2fc", "id": "250.0", "label": "250.0", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"from": "n58a39901292c47b1bac2941a84df6c4fb1", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "https://w3id.org/pmd/co/ValueObject"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb7", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value", "to": "200.0"}, {"from": "https://example.org/tensile_test_1", "title": "https://w3id.org/pmd/co/SecondaryData", "to": "Secondary data example"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb1", "title": "https://w3id.org/pmd/co/unit", "to": "https://w3id.org/pmd/co/unit#mm"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb1", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value", "to": "100.0"}, {"from": "https://example.org/tensile_test_1", "title": "https://w3id.org/pmd/tto/UltimateTensileStrength", "to": "n58a39901292c47b1bac2941a84df6c4fb5"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb4", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value", "to": "0.15"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb3", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "https://w3id.org/pmd/co/ValueObject"}, {"from": "https://example.org/tensile_test_1", "title": "https://w3id.org/pmd/tto/PercentageExtension", "to": "n58a39901292c47b1bac2941a84df6c4fb4"}, {"from": "https://example.org/tensile_test_1", "title": "https://w3id.org/pmd/tto/OriginalThickness", "to": "n58a39901292c47b1bac2941a84df6c4fb2"}, {"from": "https://example.org/tensile_test_1", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "https://w3id.org/pmd/tto/TensileTest"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb3", "title": "https://w3id.org/pmd/co/unit", "to": "https://w3id.org/pmd/co/unit#mm"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb3", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value", "to": "10.0"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb2", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value", "to": "1.0"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb6", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value", "to": "150.0"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb5", "title": "https://w3id.org/pmd/co/unit", "to": "https://w3id.org/pmd/co/unit#MPa"}, {"from": "https://example.org/tensile_test_1", "title": "https://w3id.org/pmd/tto/OriginalWidth", "to": "n58a39901292c47b1bac2941a84df6c4fb3"}, {"from": "https://example.org/tensile_test_1", "title": "https://w3id.org/pmd/co/MaterialDesignation", "to": "Steel"}, {"from": "https://example.org/tensile_test_1", "title": "https://w3id.org/pmd/tto/YoungsModulus", "to": "n58a39901292c47b1bac2941a84df6c4fb7"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb5", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "https://w3id.org/pmd/co/ValueObject"}, {"from": "https://example.org/tensile_test_1", "title": "https://w3id.org/pmd/co/PrimaryData", "to": "Primary data example"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb4", "title": "https://w3id.org/pmd/co/unit", "to": "https://w3id.org/pmd/co/unit#percent"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb6", "title": "https://w3id.org/pmd/co/unit", "to": "https://w3id.org/pmd/co/unit#MPa"}, {"from": "https://example.org/tensile_test_1", "title": "https://w3id.org/pmd/tto/OriginalGaugeLength", "to": "n58a39901292c47b1bac2941a84df6c4fb1"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb2", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "https://w3id.org/pmd/co/ValueObject"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb7", "title": "https://w3id.org/pmd/co/unit", "to": "https://w3id.org/pmd/co/unit#MPa"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb2", "title": "https://w3id.org/pmd/co/unit", "to": "https://w3id.org/pmd/co/unit#mm"}, {"from": "https://example.org/tensile_test_1", "title": "https://w3id.org/pmd/tto/YieldStrength", "to": "n58a39901292c47b1bac2941a84df6c4fb6"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb7", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "https://w3id.org/pmd/co/ValueObject"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb6", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "https://w3id.org/pmd/co/ValueObject"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb5", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value", "to": "250.0"}, {"from": "n58a39901292c47b1bac2941a84df6c4fb4", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "https://w3id.org/pmd/co/ValueObject"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

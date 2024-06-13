@@ -1,0 +1,3109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plattform MaterialDigital Tensile Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://material-digital.de/pmdao/tensile-test/",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "{no title found}"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.8.6</span>
+  </div>
+  <h1>Plattform MaterialDigital Tensile Test 0.1</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#QuantityValue">QuantityValue</a></li>
+        <li><a href="#TensileTest">Tensile Test</a></li>
+    </ul>
+    <div class="entity class" id="QuantityValue">
+        <h3>QuantityValue<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://wikiba.se/ontology#QuantityValue</code></td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredLowerYieldStrength">hasMeasuredLowerYieldStrength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredThicknessAfterFracture">hasMeasuredThicknessAfterFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalTemperature">hasNominalTemperature</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredTestingRate">hasMeasuredTestingRate</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalParallelLenghWidthAfterFracture">hasNominalParallelLenghWidthAfterFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredYieldStrengthRP02">hasMeasuredYieldStrengthRP02</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredFinalGaugeLengthAfterFracture">hasMeasuredFinalGaugeLengthAfterFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalElongation">hasNominalElongation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalOriginalThickness">hasNominalOriginalThickness</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentageElongationAfterFracture">hasMeasuredPercentageElongationAfterFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalProofStrengthTotalExtension">hasNominalProofStrengthTotalExtension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredYieldStrengthRP01">hasMeasuredYieldStrengthRP01</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredProportionalFactor">hasMeasuredProportionalFactor</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalPercentagePlasticExtensionAtMaximumForce">hasNominalPercentagePlasticExtensionAtMaximumForce</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredTemperature">hasMeasuredTemperature</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalStrainPercentageExtension">hasNominalStrainPercentageExtension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalMaximumForce">hasNominalMaximumForce</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalThicknessAfterFracture">hasNominalThicknessAfterFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredParallelLenghWidthAfterFracture">hasMeasuredParallelLenghWidthAfterFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalFinalGaugeLengthAfterFracture">hasNominalFinalGaugeLengthAfterFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalPercentageReductionOfArea">hasNominalPercentageReductionOfArea</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentagePermanentElongation">hasMeasuredPercentagePermanentElongation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredParallelLength">hasMeasuredParallelLength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalProofStrengthPlasticExtension">hasNominalProofStrengthPlasticExtension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentageElongation">hasMeasuredPercentageElongation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalYieldStrength">hasNominalYieldStrength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalYieldStrengthRP01">hasNominalYieldStrengthRP01</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentageYieldPointExtension">hasMeasuredPercentageYieldPointExtension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentageTotalExtensionAtFracture">hasMeasuredPercentageTotalExtensionAtFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredProofStrengthTotalExtension">hasMeasuredProofStrengthTotalExtension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalUpperYieldStrength">hasNominalUpperYieldStrength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredParallelLengthOriginalCrossSectionalArea">hasMeasuredParallelLengthOriginalCrossSectionalArea</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalParallelLength">hasNominalParallelLength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalPercentageTotalExtensionAtFracture">hasNominalPercentageTotalExtensionAtFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentagePlasticExtensionAtMaximumForce">hasMeasuredPercentagePlasticExtensionAtMaximumForce</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredTensileStrength">hasMeasuredTensileStrength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredUpperYieldStrength">hasMeasuredUpperYieldStrength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredGaugeLength">hasMeasuredGaugeLength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalMinimumCrossSectionalAreaAfterFracture">hasNominalMinimumCrossSectionalAreaAfterFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalParallelLengthOriginalCrossSectionalArea">hasNominalParallelLengthOriginalCrossSectionalArea</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredExtensometerGaugeLength">hasMeasuredExtensometerGaugeLength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredStrainPercentageExtension">hasMeasuredStrainPercentageExtension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredProofStrengthPlasticExtension">hasMeasuredProofStrengthPlasticExtension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredDiameterAfterFracture">hasMeasuredDiameterAfterFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredOriginalDiameter">hasMeasuredOriginalDiameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredYieldStrength">hasMeasuredYieldStrength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalModulusOfElasticity">hasNominalModulusOfElasticity</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalPercentagePermanentExtension">hasNominalPercentagePermanentExtension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalPercentageYieldPointExtension">hasNominalPercentageYieldPointExtension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalTensileStrength">hasNominalTensileStrength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalPercentageElongationAfterFracture">hasNominalPercentageElongationAfterFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalPercentagePermanentElongation">hasNominalPercentagePermanentElongation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalParallelLengthOriginalWidth">hasNominalParallelLengthOriginalWidth</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredMaximumForce">hasMeasuredMaximumForce</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredOriginalThickness">hasMeasuredOriginalThickness</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredModulusOfElasticity">hasMeasuredModulusOfElasticity</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalExtensometerGaugeLength">hasNominalExtensometerGaugeLength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalOriginalDiameter">hasNominalOriginalDiameter</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalCrossheadSeparation">hasNominalCrossheadSeparation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalDiameterAfterFracture">hasNominalDiameterAfterFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredElongation">hasMeasuredElongation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalOriginalGaugeLength">hasNominalOriginalGaugeLength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentageTotalExtensionAtMaximumForce">hasMeasuredPercentageTotalExtensionAtMaximumForce</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredOriginalGaugeLength">hasMeasuredOriginalGaugeLength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentagePermanentExtension">hasMeasuredPercentagePermanentExtension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalPercentageTotalExtensionAtMaximumForce">hasNominalPercentageTotalExtensionAtMaximumForce</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredMinimumCrossSectionalAreaAfterFracture">hasMeasuredMinimumCrossSectionalAreaAfterFracture</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalGaugeLength">hasNominalGaugeLength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalProportionalFactor">hasNominalProportionalFactor</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalTestingRate">hasNominalTestingRate</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalYieldStrengthRP02">hasNominalYieldStrengthRP02</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentageReductionOfArea">hasMeasuredPercentageReductionOfArea</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredCrossheadSeparation">hasMeasuredCrossheadSeparation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredParallelLengthOriginalWidth">hasMeasuredParallelLengthOriginalWidth</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalLowerYieldStrength">hasNominalLowerYieldStrength</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalPercentageElongation">hasNominalPercentageElongation</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="TensileTest">
+        <h3>Tensile Test<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/TensileTest</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/TranformativeAnalysisProcess">https://material-digital.de/pmdco/TranformativeAnalysisProcess</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasTestPieceGeometry">hasTestPieceGeometry</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredExtension">hasMeasuredExtension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMethod">hasMethod</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredForce">hasMeasuredForce</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredTime">hasMeasuredTime</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#hasmeasuredcrossheadseparation">has measured crosshead separation</a></li>
+        <li><a href="#hasmeasureddiameterafterfracture">has measured diameter after fracture</a></li>
+        <li><a href="#hasmeasuredelongation">has measured elongation</a></li>
+        <li><a href="#hasmeasuredextension">has measured extension</a></li>
+        <li><a href="#hasmeasuredextensometergaugelength">has measured extensometer gauge length</a></li>
+        <li><a href="#hasmeasuredfinalgaugelengthafterfracture">has measured final gauge length after fracture</a></li>
+        <li><a href="#hasmeasuredforce">has measured force</a></li>
+        <li><a href="#hasmeasuredgaugelength">has measured gauge length</a></li>
+        <li><a href="#hasmeasuredloweryieldstrength">has measured lower yield strength</a></li>
+        <li><a href="#hasmeasuredmaximumforce">has measured maximum force</a></li>
+        <li><a href="#hasmeasuredminimumcrosssectionalareaafterfracture">has measured minimum cross sectional area after fracture</a></li>
+        <li><a href="#hasmeasuredmodulusofelasticity">has measured modulus of elasticity</a></li>
+        <li><a href="#hasmeasuredoriginaldiameter">has measured original diameter</a></li>
+        <li><a href="#hasmeasuredoriginalgaugelength">has measured original gauge length</a></li>
+        <li><a href="#hasmeasuredoriginalthickness">has measured original thickness</a></li>
+        <li><a href="#hasmeasuredparallelLenghwidthafterfracture">has measured parallelLengh width after fracture</a></li>
+        <li><a href="#hasmeasuredparallellength">has measured parallel length</a></li>
+        <li><a href="#hasmeasuredparallellengthoriginalcrosssectionalarea">has measured parallel length original cross sectional area</a></li>
+        <li><a href="#hasmeasuredparallellengthoriginalwidth">has measured parallel length original width</a></li>
+        <li><a href="#hasmeasuredpercentageelongation">has measured percentage elongation</a></li>
+        <li><a href="#hasmeasuredpercentageelongationafterfracture">has measured percentage elongation after fracture</a></li>
+        <li><a href="#hasmeasuredpercentagepermanentelongation">has measured percentage permanent elongation</a></li>
+        <li><a href="#hasmeasuredpercentagepermanentextension">has measured percentage permanent extension</a></li>
+        <li><a href="#hasmeasuredpercentageplasticextensionatmaximumforce">has measured percentage plastic extension at maximum force</a></li>
+        <li><a href="#hasmeasuredpercentagereductionofarea">has measured percentage reduction of area</a></li>
+        <li><a href="#hasmeasuredpercentagetotalextensionatfracture">has measured percentage total extension at fracture</a></li>
+        <li><a href="#hasmeasuredpercentagetotalextensionatmaximumforce">has measured percentage total extension at maximum force</a></li>
+        <li><a href="#hasmeasuredpercentageyieldpointextension">has measured percentage yield point extension</a></li>
+        <li><a href="#hasmeasuredproofstrengthplasticextension">has measured proof strength plastic extension</a></li>
+        <li><a href="#hasmeasuredproofstrengthtotalextension">has measured proof strength total extension</a></li>
+        <li><a href="#hasmeasuredproportionalfactor">has measured proportional factor</a></li>
+        <li><a href="#hasmeasuredstrainpercentageextension">has measured strain percentage extension</a></li>
+        <li><a href="#hasmeasuredtemperature">has measured temperature</a></li>
+        <li><a href="#hasmeasuredtensilestrength">has measured tensile strength</a></li>
+        <li><a href="#hasmeasuredtestingrate">has measured testing rate</a></li>
+        <li><a href="#hasmeasuredthicknessafterfracture">has measured thickness after fracture</a></li>
+        <li><a href="#hasmeasuredtime">has measured time</a></li>
+        <li><a href="#hasmeasuredupperyieldstrength">has measured upper yield strength</a></li>
+        <li><a href="#hasmeasuredyieldstrength">has measured yield strength</a></li>
+        <li><a href="#hasMmeasuredyieldstrengthRP01">hasM measured yield strength RP01</a></li>
+        <li><a href="#hasmeasuredyieldstrengthRP02">has measured yield strength RP02</a></li>
+        <li><a href="#hasnominalcrossheadseparation">has nominal crosshead separation</a></li>
+        <li><a href="#hasnominaldiameterafterfracture">has nominal diameter after fracture</a></li>
+        <li><a href="#hasnominalelongation">has nominal elongation</a></li>
+        <li><a href="#hasnominalextensometergaugelength">has nominal extensometer gauge length</a></li>
+        <li><a href="#hasnominalfinalgaugelengthafterfracture">has nominal final gauge length after fracture</a></li>
+        <li><a href="#hasnominalgaugelength">has nominal gauge length</a></li>
+        <li><a href="#hasnominalloweryieldstrength">has nominal lower yield strength</a></li>
+        <li><a href="#hasnominalmaximumforce">has nominal maximum force</a></li>
+        <li><a href="#hasnominalminimumcrosssectionalareaafterfracture">has nominal minimum cross sectional area after fracture</a></li>
+        <li><a href="#hasnominalmodulusofelasticity">has nominal modulus of elasticity</a></li>
+        <li><a href="#hasnominaloriginaldiameter">has nominal original diameter</a></li>
+        <li><a href="#hasnominaloriginalgaugelength">has nominal original gauge length</a></li>
+        <li><a href="#hasnominaloriginalthickness">has nominal original thickness</a></li>
+        <li><a href="#hasnominalparallellenghwidthafterfracture">has nominal parallel lengh width after fracture</a></li>
+        <li><a href="#hasnominalparallellength">has nominal parallel length</a></li>
+        <li><a href="#hasnominalparallellengthoriginalcrosssectionalarea">has nominal parallel length original cross sectional area</a></li>
+        <li><a href="#hasnominalparallellengthoriginalwidth">has nominal parallel length original width</a></li>
+        <li><a href="#hasnominalpercentageelongation">has nominal percentage elongation</a></li>
+        <li><a href="#hasnominalpercentageelongationafterfracture">has nominal percentage elongation after fracture</a></li>
+        <li><a href="#hasnominalpercentagepermanentelongation">has nominal percentage permanent elongation</a></li>
+        <li><a href="#hasnominalpercentagepermanentextension">has nominal percentage permanent extension</a></li>
+        <li><a href="#hasnominalpercentageplasticextensionatmaximumforce">has nominal percentage plastic extension at maximum force</a></li>
+        <li><a href="#hasnominalpercentagereductionofarea">has nominal percentage reduction of area</a></li>
+        <li><a href="#hasnominalpercentagetotalextensionatfracture">has nominal percentage total extension at fracture</a></li>
+        <li><a href="#hasnominalpercentagetotalextensionatmaximumforce">has nominal percentage total extension at maximum force</a></li>
+        <li><a href="#hasnominalpercentageyieldpointextension">has nominal percentage yield point extension</a></li>
+        <li><a href="#hasnominalproofstrengthplasticextension">has nominal proof strength plastic extension</a></li>
+        <li><a href="#hasnominalproofstrengthtotalextension">has nominal proof strength total extension</a></li>
+        <li><a href="#hasnominalproportionalfactor">has nominal proportional factor</a></li>
+        <li><a href="#hasnominalstrainpercentageextension">has nominal strain percentage extension</a></li>
+        <li><a href="#hasnominaltemperature">has nominal temperature</a></li>
+        <li><a href="#hasnominaltensilestrength">has nominal tensile strength</a></li>
+        <li><a href="#hasnominaltestingrate">has nominal testing rate</a></li>
+        <li><a href="#hasnominalthicknessafterfracture">has nominal thickness after fracture</a></li>
+        <li><a href="#hasnominalupperyieldstrength">has nominal upper yield strength</a></li>
+        <li><a href="#hasnominalyieldstrength">has nominal yield strength</a></li>
+        <li><a href="#hasnominalyieldstrengthRP01">has nominal yield strength RP01</a></li>
+        <li><a href="#hasnominalyieldstrengthRP02">has nominal yield strength RP02</a></li>
+    </ul>
+    <div class="entity property" id="hasmeasuredcrossheadseparation">
+        <h3>has measured crosshead separation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredCrossheadSeparation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured distance of the crosshead separation during the tensile test process.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativePrimaryMetadata">https://material-digital.de/pmdco/hasQuantitativePrimaryMetadata</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasureddiameterafterfracture">
+        <h3>has measured diameter after fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredDiameterAfterFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal diameter of a circular test piece after fracture in a tensile test process.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredelongation">
+        <h3>has measured elongation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredElongation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured increase the original gauge length at any moment during the tensile test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredextension">
+        <h3>has measured extension<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredExtension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe a series of values representing the increase in the extensometer gauge length, at any moment during the tensile test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativePrimaryDataSeriesMeasurement">https://material-digital.de/pmdco/hasQuantitativePrimaryDataSeriesMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/HeaderField">https://material-digital.de/pmdco/HeaderField</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredextensometergaugelength">
+        <h3>has measured extensometer gauge length<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredExtensometerGaugeLength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured initial gauge length of the extensometer used for measurement of extension.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredfinalgaugelengthafterfracture">
+        <h3>has measured final gauge length after fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredFinalGaugeLengthAfterFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured length between the gauge length marks on the tensile test specimen measured after fracture at room temperature. The two pieces must have been carefully fitted back together so that their axes lie in a straight line.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredforce">
+        <h3>has measured force<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredForce</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe a series of values for the measured force needed during the *tensile test* experiment.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativePrimaryDataSeriesMeasurement">https://material-digital.de/pmdco/hasQuantitativePrimaryDataSeriesMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/HeaderField">https://material-digital.de/pmdco/HeaderField</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredgaugelength">
+        <h3>has measured gauge length<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredGaugeLength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured length of the parallel portion of the test piece on which the elongation is measured at any moment during the tensile test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredloweryieldstrength">
+        <h3>has measured lower yield strength<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredLowerYieldStrength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured lowest value of stress during plastic yielding, ignoring any initial transient effects.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredmaximumforce">
+        <h3>has measured maximum force<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredMaximumForce</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe either the measured highest force that the test piece withstands during the tensile test for materials displaying no discontinuous yielding, or the measured highest force that the test piece withstands during the tensile test after the beginning of work-hardening for materials displaying discontinuous yielding.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredminimumcrosssectionalareaafterfracture">
+        <h3>has measured minimum cross sectional area after fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredMinimumCrossSectionalAreaAfterFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured minimum cross-sectional area after fracture of the tensile test specimen.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredmodulusofelasticity">
+        <h3>has measured modulus of elasticity<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredModulusOfElasticity</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured quotient of change of stress delta R and change of percentage extension delta e in the range of evaluation, multiplied by 100 %.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredoriginaldiameter">
+        <h3>has measured original diameter<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredOriginalDiameter</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured diameter of a circular tensile test specimen prior to the test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredoriginalgaugelength">
+        <h3>has measured original gauge length<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredOriginalGaugeLength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured length between the gauge length marks on the test piece measured at room temperature before the test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredoriginalthickness">
+        <h3>has measured original thickness<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredOriginalThickness</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal thickness of a of a flat tensile test specimen or wall thickness of a tube measured prior to the test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredparallelLenghwidthafterfracture">
+        <h3>has measured parallelLengh width after fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredParallelLenghWidthAfterFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured width of the parallel length of a flat tensile test specimen or average width of the longitudinal strip taken from a tube or width of flat wire after fracture.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredparallellength">
+        <h3>has measured parallel length<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredParallelLength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured length of the parallel reduced section of a tensile test specimen.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredparallellengthoriginalcrosssectionalarea">
+        <h3>has measured parallel length original cross sectional area<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredParallelLengthOriginalCrossSectionalArea</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredparallellengthoriginalwidth">
+        <h3>has measured parallel length original width<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredParallelLengthOriginalWidth</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured width of the parallel length of a flat tensile test specimen or average width of the longitudinal strip taken from a tube or width of flat wire.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredpercentageelongation">
+        <h3>has measured percentage elongation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentageElongation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured elongation expressed as a percentage of the original gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredpercentageelongationafterfracture">
+        <h3>has measured percentage elongation after fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentageElongationAfterFracture</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredpercentagepermanentelongation">
+        <h3>has measured percentage permanent elongation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentagePermanentElongation</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredpercentagepermanentextension">
+        <h3>has measured percentage permanent extension<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentagePermanentExtension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal increase in the extensometer gauge length, after removal of a specified stress from the test piece, expressed as a percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredpercentageplasticextensionatmaximumforce">
+        <h3>has measured percentage plastic extension at maximum force<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentagePlasticExtensionAtMaximumForce</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured plastic extension at maximum force, expressed as a percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredpercentagereductionofarea">
+        <h3>has measured percentage reduction of area<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentageReductionOfArea</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured maximum change in cross-sectional area which has occurred during the tensile test ($S_{o} – S_{u}$), expressed as a percentage of the original cross-sectional area, $S_{o}.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredpercentagetotalextensionatfracture">
+        <h3>has measured percentage total extension at fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentageTotalExtensionAtFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured total extension (elastic extension plus plastic extension) at the moment of fracture, expressed as a percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredpercentagetotalextensionatmaximumforce">
+        <h3>has measured percentage total extension at maximum force<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentageTotalExtensionAtMaximumForce</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured total extension (elastic extension plus plastic extension) at maximum force, expressed as a percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredpercentageyieldpointextension">
+        <h3>has measured percentage yield point extension<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredPercentageYieldPointExtension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured extension between the start of yielding and the start of uniform work-hardening, expressed as a percentage of the extensometer gauge length (for discontinuous yielding materials).
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredproofstrengthplasticextension">
+        <h3>has measured proof strength plastic extension<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredProofStrengthPlasticExtension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured stress at which the plastic extension is equal to a specified percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredproofstrengthtotalextension">
+        <h3>has measured proof strength total extension<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredProofStrengthTotalExtension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal stress at which total extension (elastic extension plus plastic extension) is equal to a specified percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredproportionalfactor">
+        <h3>has measured proportional factor<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredProportionalFactor</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredstrainpercentageextension">
+        <h3>has measured strain percentage extension<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredStrainPercentageExtension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured extension expressed as a percentage of the extensometer gauge length
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativePrimaryMetadata">https://material-digital.de/pmdco/hasQuantitativePrimaryMetadata</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredtemperature">
+        <h3>has measured temperature<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredTemperature</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal temperature during the tensile test process.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredtensilestrength">
+        <h3>has measured tensile strength<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredTensileStrength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured stress corresponding to the maximum force.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredtestingrate">
+        <h3>has measured testing rate<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredTestingRate</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured rate used during the tensile test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredthicknessafterfracture">
+        <h3>has measured thickness after fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredThicknessAfterFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured thickness of a flat tensile test specimen or wall thickness of a tube after fracture.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement">https://material-digital.de/pmdco/hasQuantitativeMetadataMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredtime">
+        <h3>has measured time<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredTime</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe a series of values representing the time of measurements taken at any moment during the tensile test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativePrimaryDataSeriesMeasurement">https://material-digital.de/pmdco/hasQuantitativePrimaryDataSeriesMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/HeaderField">https://material-digital.de/pmdco/HeaderField</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredupperyieldstrength">
+        <h3>has measured upper yield strength<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredUpperYieldStrength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured maximum value of stress prior to the first decrease in force.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredyieldstrength">
+        <h3>has measured yield strength<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredYieldStrength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured output of tensile test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasMmeasuredyieldstrengthRP01">
+        <h3>hasM measured yield strength RP01<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredYieldStrengthRP01</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the measured output of tensile test at 0.1% plastic offset.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredYieldStrength">hasMeasuredYieldStrength</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmeasuredyieldstrengthRP02">
+        <h3>has measured yield strength RP02<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMeasuredYieldStrengthRP02</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasMeasuredYieldStrength">hasMeasuredYieldStrength</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalcrossheadseparation">
+        <h3>has nominal crosshead separation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalCrossheadSeparation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal distance of the crosshead separation during the tensile test process.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalPrimaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalPrimaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominaldiameterafterfracture">
+        <h3>has nominal diameter after fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalDiameterAfterFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal diameter of a circular test piece after fracture in a tensile test process.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalelongation">
+        <h3>has nominal elongation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalElongation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal increase the original gauge length at any moment during the tensile test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalextensometergaugelength">
+        <h3>has nominal extensometer gauge length<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalExtensometerGaugeLength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal initial gauge length of the extensometer used for measurement of extension.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalfinalgaugelengthafterfracture">
+        <h3>has nominal final gauge length after fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalFinalGaugeLengthAfterFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal length between the gauge length marks on the tensile test specimen measured after fracture at room temperature. The two pieces must have been carefully fitted back together so that their axes lie in a straight line.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalgaugelength">
+        <h3>has nominal gauge length<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalGaugeLength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal length of the parallel portion of the test piece on which the elongation is measured at any moment during the tensile test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalloweryieldstrength">
+        <h3>has nominal lower yield strength<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalLowerYieldStrength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal lowest value of stress during plastic yielding, ignoring any initial transient effects.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalmaximumforce">
+        <h3>has nominal maximum force<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalMaximumForce</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe either the nominal highest force that the test piece withstands during the tensile test for materials displaying no discontinuous yielding, or the nominal highest force that the test piece withstands during the tensile test after the beginning of work-hardening for materials displaying discontinuous yielding.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement">https://material-digital.de/pmdco/hasQuantitativeSecondaryMeasurement</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalminimumcrosssectionalareaafterfracture">
+        <h3>has nominal minimum cross sectional area after fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalMinimumCrossSectionalAreaAfterFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal minimum cross-sectional area after fracture of the tensile test specimen.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalmodulusofelasticity">
+        <h3>has nominal modulus of elasticity<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalModulusOfElasticity</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal quotient of change of stress delta R and change of percentage extension delta e in the range of evaluation, multiplied by 100 %.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominaloriginaldiameter">
+        <h3>has nominal original diameter<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalOriginalDiameter</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal diameter of a circular tensile test specimen prior to the test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominaloriginalgaugelength">
+        <h3>has nominal original gauge length<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalOriginalGaugeLength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal length between the gauge length marks on the test piece measured at room temperature before the test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominaloriginalthickness">
+        <h3>has nominal original thickness<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalOriginalThickness</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal thickness of a of a flat tensile test specimen or wall thickness of a tube measured prior to the test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalparallellenghwidthafterfracture">
+        <h3>has nominal parallel lengh width after fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalParallelLenghWidthAfterFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal width of the parallel length of a flat tensile test specimen or average width of the longitudinal strip taken from a tube or width of flat wire after fracture.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalparallellength">
+        <h3>has nominal parallel length<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalParallelLength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal length of the parallel reduced section of a tensile test specimen.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalparallellengthoriginalcrosssectionalarea">
+        <h3>has nominal parallel length original cross sectional area<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalParallelLengthOriginalCrossSectionalArea</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalparallellengthoriginalwidth">
+        <h3>has nominal parallel length original width<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalParallelLengthOriginalWidth</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal width of the parallel length of a flat tensile test specimen or average width of the longitudinal strip taken from a tube or width of flat wire.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalpercentageelongation">
+        <h3>has nominal percentage elongation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalPercentageElongation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal elongation expressed as a percentage of the original gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalpercentageelongationafterfracture">
+        <h3>has nominal percentage elongation after fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalPercentageElongationAfterFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the permanent elongation of the gauge length after fracture ($L_{u} − L_{o}$), expressed as a percentage of the original gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalpercentagepermanentelongation">
+        <h3>has nominal percentage permanent elongation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalPercentagePermanentElongation</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalpercentagepermanentextension">
+        <h3>has nominal percentage permanent extension<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalPercentagePermanentExtension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal increase in the extensometer gauge length, after removal of a specified stress from the test piece, expressed as a percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalpercentageplasticextensionatmaximumforce">
+        <h3>has nominal percentage plastic extension at maximum force<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalPercentagePlasticExtensionAtMaximumForce</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal plastic extension at maximum force, expressed as a percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalpercentagereductionofarea">
+        <h3>has nominal percentage reduction of area<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalPercentageReductionOfArea</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal maximum change in cross-sectional area which has occurred during the tensile test ($S_{o} – S_{u}$), expressed as a percentage of the original cross-sectional area, $S_{o}.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalpercentagetotalextensionatfracture">
+        <h3>has nominal percentage total extension at fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalPercentageTotalExtensionAtFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal total extension (elastic extension plus plastic extension) at the moment of fracture, expressed as a percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalpercentagetotalextensionatmaximumforce">
+        <h3>has nominal percentage total extension at maximum force<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalPercentageTotalExtensionAtMaximumForce</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the total nominal extension (elastic extension plus plastic extension) at maximum force, expressed as a percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalpercentageyieldpointextension">
+        <h3>has nominal percentage yield point extension<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalPercentageYieldPointExtension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal extension between the start of yielding and the start of uniform work-hardening, expressed as a percentage of the extensometer gauge length (for discontinuous yielding materials).
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalproofstrengthplasticextension">
+        <h3>has nominal proof strength plastic extension<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalProofStrengthPlasticExtension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal stress at which the plastic extension is equal to a specified percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalproofstrengthtotalextension">
+        <h3>has nominal proof strength total extension<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalProofStrengthTotalExtension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal stress at which total extension (elastic extension plus plastic extension) is equal to a specified percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalproportionalfactor">
+        <h3>has nominal proportional factor<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalProportionalFactor</code></td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalstrainpercentageextension">
+        <h3>has nominal strain percentage extension<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalStrainPercentageExtension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal extension expressed as a percentage of the extensometer gauge length.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalPrimaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalPrimaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominaltemperature">
+        <h3>has nominal temperature<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalTemperature</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal temperature during the tensile test process.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominaltensilestrength">
+        <h3>has nominal tensile strength<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalTensileStrength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal stress corresponding to the maximum force.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominaltestingrate">
+        <h3>has nominal testing rate<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalTestingRate</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal rate used during the tensile test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalthicknessafterfracture">
+        <h3>has nominal thickness after fracture<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalThicknessAfterFracture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal thickness of a flat tensile test specimen or wall thickness of a tube after fracture.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter">https://material-digital.de/pmdco/hasQuantitativeNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalupperyieldstrength">
+        <h3>has nominal upper yield strength<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalUpperYieldStrength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal maximum value of stress prior to the first decrease in force.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalyieldstrength">
+        <h3>has nominal yield strength<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalYieldStrength</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal output of tensile test.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter">https://material-digital.de/pmdco/hasQuantitativeNominalSecondaryParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalyieldstrengthRP01">
+        <h3>has nominal yield strength RP01<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalYieldStrengthRP01</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal output of tensile test at 0.1% plastic offset.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalYieldStrength">hasNominalYieldStrength</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasnominalyieldstrengthRP02">
+        <h3>has nominal yield strength RP02<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasNominalYieldStrengthRP02</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the nominal output of tensile test at 0.2% plastic offset.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdao/tensile-test/hasNominalYieldStrength">hasNominalYieldStrength</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup> or <a href="https://material-digital.de/pmdco/Object">https://material-digital.de/pmdco/Object</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://wikiba.se/ontology#QuantityValue">http://wikiba.se/ontology#QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#hasmethod">has method</a></li>
+        <li><a href="#hastestpiecegeometry">has test piece geometry</a></li>
+    </ul>
+    <div class="entity property" id="hasmethod">
+        <h3>has method<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasMethod</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the specific testing rate rules (either extension (A1, A2) or force controlled (B)) and chosen by the operator.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasNominalMetadataParameter">https://material-digital.de/pmdco/hasNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hastestpiecegeometry">
+        <h3>has test piece geometry<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://material-digital.de/pmdao/tensile-test/hasTestPieceGeometry</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property is used to describe the cross-section of the tensile test pieces.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://material-digital.de/pmdco/hasNominalMetadataParameter">https://material-digital.de/pmdco/hasNominalMetadataParameter</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://material-digital.de/pmdao/tensile-test/TensileTest">TensileTest</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+  <section id="namedindividuals">
+    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+    </ul>
+</section>
+  
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>:</dt>
+        <dd><code>https://material-digital.de/pmdao/tensile-test/</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+        <dt>pmdco</dt>
+        <dd><code>https://material-digital.de/pmdco/</code></dd>
+        <dt>wikiba</dt>
+        <dd><code>http://wikiba.se/ontology#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>

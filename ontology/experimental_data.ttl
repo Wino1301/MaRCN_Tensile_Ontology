@@ -1,0 +1,31 @@
+@prefix core: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tto: <https://w3id.org/pmd/tto/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/tensile_test> a tto:TensileTest ;
+    core:MaterialDesignation "Steel"^^xsd:string ;
+    core:PrimaryData "Primary data example"^^xsd:string ;
+    core:SecondaryData "Secondary data example"^^xsd:string ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "100.0"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "1.0"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "10.0"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "0.15"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#percent> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "250.0"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "150.0"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "200.0"^^xsd:float ;
+            core:unit <https://w3id.org/pmd/co/unit#MPa> ] .
+

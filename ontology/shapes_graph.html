@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b3", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b3", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b15", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b15", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b10", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b10", "shape": "dot"}, {"color": "#97c2fc", "id": "1", "label": "1", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b16", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b16", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b17", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b17", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b8", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b8", "shape": "dot"}, {"color": "#97c2fc", "id": "http://www.w3.org/ns/shacl#NodeShape", "label": "http://www.w3.org/ns/shacl#NodeShape", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b27", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b27", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/co/MaterialDesignation", "label": "https://w3id.org/pmd/co/MaterialDesignation", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b14", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b14", "shape": "dot"}, {"color": "#97c2fc", "id": "0.0", "label": "0.0", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b18", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b18", "shape": "dot"}, {"color": "#97c2fc", "id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value", "label": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b24", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b24", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b26", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b26", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b25", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b25", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b28", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b28", "shape": "dot"}, {"color": "#97c2fc", "id": "http://www.w3.org/2001/XMLSchema#string", "label": "http://www.w3.org/2001/XMLSchema#string", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b23", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b23", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b5", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b5", "shape": "dot"}, {"color": "#97c2fc", "id": "http://www.w3.org/2001/XMLSchema#float", "label": "http://www.w3.org/2001/XMLSchema#float", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b20", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b20", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b22", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b22", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b2", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b2", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b4", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b4", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b31", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b31", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b13", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b13", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b19", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b19", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/tto/OriginalGaugeLength", "label": "https://w3id.org/pmd/tto/OriginalGaugeLength", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b7", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b7", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/tto/UltimateTensileStrength", "label": "https://w3id.org/pmd/tto/UltimateTensileStrength", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b32", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b32", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/co/unit#MPa", "label": "https://w3id.org/pmd/co/unit#MPa", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/tto/PercentageExtension", "label": "https://w3id.org/pmd/tto/PercentageExtension", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b11", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b11", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b12", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b12", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b30", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b30", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/co/unit#mm", "label": "https://w3id.org/pmd/co/unit#mm", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b29", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b29", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b21", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b21", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/co/unit", "label": "https://w3id.org/pmd/co/unit", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b9", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b9", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/co/PrimaryData", "label": "https://w3id.org/pmd/co/PrimaryData", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/tto/OriginalThickness", "label": "https://w3id.org/pmd/tto/OriginalThickness", "shape": "dot"}, {"color": "#97c2fc", "id": "n594b2ba30da4437bb58df6ca84aa1ad7b6", "label": "n594b2ba30da4437bb58df6ca84aa1ad7b6", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/tto/OriginalWidth", "label": "https://w3id.org/pmd/tto/OriginalWidth", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/tto/YieldStrength", "label": "https://w3id.org/pmd/tto/YieldStrength", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/tto/TensileTest", "label": "https://w3id.org/pmd/tto/TensileTest", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/co/unit#percent", "label": "https://w3id.org/pmd/co/unit#percent", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/tto/YoungsModulus", "label": "https://w3id.org/pmd/tto/YoungsModulus", "shape": "dot"}, {"color": "#97c2fc", "id": "https://w3id.org/pmd/co/SecondaryData", "label": "https://w3id.org/pmd/co/SecondaryData", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"from": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b3"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b15"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b10", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b16", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b17"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b8", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "http://www.w3.org/ns/shacl#NodeShape"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b27", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/co/MaterialDesignation"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b14", "title": "http://www.w3.org/ns/shacl#minInclusive", "to": "0.0"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b18", "title": "http://www.w3.org/ns/shacl#path", "to": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b24", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b26"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b25", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b28", "title": "http://www.w3.org/ns/shacl#datatype", "to": "http://www.w3.org/2001/XMLSchema#string"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b23", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b5", "title": "http://www.w3.org/ns/shacl#datatype", "to": "http://www.w3.org/2001/XMLSchema#float"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b10", "title": "http://www.w3.org/ns/shacl#datatype", "to": "http://www.w3.org/2001/XMLSchema#float"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "http://www.w3.org/ns/shacl#NodeShape"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b20", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b22"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b2", "title": "http://www.w3.org/ns/shacl#datatype", "to": "http://www.w3.org/2001/XMLSchema#string"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b25", "title": "http://www.w3.org/ns/shacl#datatype", "to": "http://www.w3.org/2001/XMLSchema#float"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b3", "title": "http://www.w3.org/ns/shacl#node", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b4"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b4", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "http://www.w3.org/ns/shacl#NodeShape"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b22", "title": "http://www.w3.org/ns/shacl#datatype", "to": "http://www.w3.org/2001/XMLSchema#float"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b31", "title": "http://www.w3.org/ns/shacl#datatype", "to": "http://www.w3.org/2001/XMLSchema#float"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b22", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b15", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b13", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b31", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b19", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/tto/OriginalGaugeLength"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b5", "title": "http://www.w3.org/ns/shacl#path", "to": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b2"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b10", "title": "http://www.w3.org/ns/shacl#path", "to": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b7", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/tto/UltimateTensileStrength"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b2", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b27"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b32", "title": "http://www.w3.org/ns/shacl#hasValue", "to": "https://w3id.org/pmd/co/unit#MPa"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b3", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/tto/PercentageExtension"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b11", "title": "http://www.w3.org/ns/shacl#node", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b12"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b20", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "http://www.w3.org/ns/shacl#NodeShape"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b25", "title": "http://www.w3.org/ns/shacl#path", "to": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b31", "title": "http://www.w3.org/ns/shacl#minInclusive", "to": "0.0"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b30", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b31"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b23", "title": "http://www.w3.org/ns/shacl#node", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b24"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b13", "title": "http://www.w3.org/ns/shacl#hasValue", "to": "https://w3id.org/pmd/co/unit#mm"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b29", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b21", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b32", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/co/unit"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b19"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b14", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b30", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "http://www.w3.org/ns/shacl#NodeShape"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b30", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b32"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b13", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/co/unit"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b9", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b12", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b13"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b26", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b23"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b17", "title": "http://www.w3.org/ns/shacl#hasValue", "to": "https://w3id.org/pmd/co/unit#MPa"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b3", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b17", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/co/unit"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b27", "title": "http://www.w3.org/ns/shacl#datatype", "to": "http://www.w3.org/2001/XMLSchema#string"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b14", "title": "http://www.w3.org/ns/shacl#datatype", "to": "http://www.w3.org/2001/XMLSchema#float"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b18", "title": "http://www.w3.org/ns/shacl#minInclusive", "to": "0.0"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b11"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b12", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b14"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b4", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b5"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b11", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b5", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b12", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "http://www.w3.org/ns/shacl#NodeShape"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b28", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/co/PrimaryData"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b27", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b23", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/tto/OriginalThickness"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b21", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/co/unit"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b4", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b6"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b26", "title": "http://www.w3.org/ns/shacl#hasValue", "to": "https://w3id.org/pmd/co/unit#mm"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b29", "title": "http://www.w3.org/ns/shacl#node", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b30"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b16", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b18"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b11", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/tto/OriginalWidth"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b9", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/co/unit"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b14", "title": "http://www.w3.org/ns/shacl#path", "to": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b26", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/co/unit"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b21", "title": "http://www.w3.org/ns/shacl#hasValue", "to": "https://w3id.org/pmd/co/unit#mm"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b32", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b6", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b28", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b5", "title": "http://www.w3.org/ns/shacl#minInclusive", "to": "0.0"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b19", "title": "http://www.w3.org/ns/shacl#node", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b20"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b10", "title": "http://www.w3.org/ns/shacl#minInclusive", "to": "0.0"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b29", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/tto/YieldStrength"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b24", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b25"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "title": "http://www.w3.org/ns/shacl#targetClass", "to": "https://w3id.org/pmd/tto/TensileTest"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b9", "title": "http://www.w3.org/ns/shacl#hasValue", "to": "https://w3id.org/pmd/co/unit#MPa"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b15", "title": "http://www.w3.org/ns/shacl#node", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b16"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b17", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b25", "title": "http://www.w3.org/ns/shacl#minInclusive", "to": "0.0"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b8", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b10"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b19", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b28"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b6", "title": "http://www.w3.org/ns/shacl#hasValue", "to": "https://w3id.org/pmd/co/unit#percent"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b29"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b1", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b7"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b18", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b15", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/tto/YoungsModulus"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b22", "title": "http://www.w3.org/ns/shacl#minInclusive", "to": "0.0"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b6", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/co/unit"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b8", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b9"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b22", "title": "http://www.w3.org/ns/shacl#path", "to": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b7", "title": "http://www.w3.org/ns/shacl#minCount", "to": "1"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b31", "title": "http://www.w3.org/ns/shacl#path", "to": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b18", "title": "http://www.w3.org/ns/shacl#datatype", "to": "http://www.w3.org/2001/XMLSchema#float"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b2", "title": "http://www.w3.org/ns/shacl#path", "to": "https://w3id.org/pmd/co/SecondaryData"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b7", "title": "http://www.w3.org/ns/shacl#node", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b8"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b24", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "http://www.w3.org/ns/shacl#NodeShape"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b16", "title": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "to": "http://www.w3.org/ns/shacl#NodeShape"}, {"from": "n594b2ba30da4437bb58df6ca84aa1ad7b20", "title": "http://www.w3.org/ns/shacl#property", "to": "n594b2ba30da4437bb58df6ca84aa1ad7b21"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
