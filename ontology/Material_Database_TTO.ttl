@@ -1,0 +1,1143 @@
+@prefix core: <https://w3id.org/pmd/co/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tto: <https://w3id.org/pmd/tto/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061/Tensile_test_1> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Aluminium_6061"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Aluminium_6061/Tensile_test_1.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Aluminium_6061/Tensile_test_1.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.09"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.49"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "20.04"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "247.61473"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "187.8093"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "58.662"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061/Tensile_test_2> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Aluminium_6061"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Aluminium_6061/Tensile_test_2.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Aluminium_6061/Tensile_test_2.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.15"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.59"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "13.858"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "211.67144"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "160.37525"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "56.164"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061/Tensile_test_3> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Aluminium_6061"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Aluminium_6061/Tensile_test_3.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Aluminium_6061/Tensile_test_3.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.12"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "20.334"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "300.38282"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "242.53782"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "65.79"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061/Tensile_test_4> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Aluminium_6061"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Aluminium_6061/Tensile_test_4.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Aluminium_6061/Tensile_test_4.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.194"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.63"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "18.853"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "194.72546"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "142.15892"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "49.174"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061/Tensile_test_5> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Aluminium_6061"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Aluminium_6061/Tensile_test_5.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Aluminium_6061/Tensile_test_5.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.14"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "12.64"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "18.823"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "257.32536"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "198.99661"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "59.64"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass/Tensile_test_1> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Brass"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Brass/Tensile_test_1.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Brass/Tensile_test_1.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.08"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.25"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "25.608999999999998"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "418.83189"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "352.23066"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "114.6"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass/Tensile_test_2> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Brass"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Brass/Tensile_test_2.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Brass/Tensile_test_2.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.52"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "31.698999999999998"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "398.45186"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "340.0554"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "93.027"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass/Tensile_test_3> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Brass"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Brass/Tensile_test_3.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Brass/Tensile_test_3.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.23"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.43"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "31.893"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "419.47427"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "358.40033"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "84.382"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass/Tensile_test_4> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Brass"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Brass/Tensile_test_4.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Brass/Tensile_test_4.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.19"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.5"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "35.223"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "339.67221"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "281.53337"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "78.35"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass/Tensile_test_5> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Brass"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Brass/Tensile_test_5.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Brass/Tensile_test_5.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.19"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.5"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "31.828"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "340.01946"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "280.00837"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "67.146"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass/Tensile_test_6> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Brass"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Brass/Tensile_test_6.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Brass/Tensile_test_6.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.143"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.506"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "32.830999999999996"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "76.36262"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "63.83871"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "17.316"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018/Tensile_test_1> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Steel_1018"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Steel_1018/Tensile_test_1.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Steel_1018/Tensile_test_1.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.61"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.47"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "32.976"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "307.72384"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "287.2398"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "155.371"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018/Tensile_test_2> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Steel_1018"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Steel_1018/Tensile_test_2.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Steel_1018/Tensile_test_2.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.18"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.45"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "33.652"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "413.34729"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "268.53681"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "139.029"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018/Tensile_test_3> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Steel_1018"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Steel_1018/Tensile_test_3.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Steel_1018/Tensile_test_3.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.14"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.52"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "31.563000000000002"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "274.58578"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "258.55999"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "119.404"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018/Tensile_test_4> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Steel_1018"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Steel_1018/Tensile_test_4.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Steel_1018/Tensile_test_4.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.17"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.493"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "33.695"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "310.67449"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "288.82689"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "134.228"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018/Tensile_test_5> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Steel_1018"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Steel_1018/Tensile_test_5.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Steel_1018/Tensile_test_5.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.14"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.48"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "32.81"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "315.33091"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "294.6106"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "146.701"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018/Tensile_test_6> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Steel_1018"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Steel_1018/Tensile_test_6.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Steel_1018/Tensile_test_6.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.15"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.5"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "32.985"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "281.84123"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "261.06743"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "150.227"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018/Tensile_test_7> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Steel_1018"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Steel_1018/Tensile_test_7.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Steel_1018/Tensile_test_7.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.18"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.46"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "35.039"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "226.43373"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "198.48516"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "90.688"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018/Tensile_test_8> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Steel_1018"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Steel_1018/Tensile_test_8.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Steel_1018/Tensile_test_8.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.14"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.49"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "32.07"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "342.31817"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "324.40025"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "132.691"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_4130/Tensile_test_1> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Steel_4130"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Steel_4130/Tensile_test_1.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Steel_4130/Tensile_test_1.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_4130> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.15"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.4"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "32.929"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "421.02141"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "299.2979"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "124.459"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_4130/Tensile_test_2> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Steel_4130"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Steel_4130/Tensile_test_2.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Steel_4130/Tensile_test_2.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_4130> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.19"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.48"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "32.611000000000004"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "404.94286"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "281.07825"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "140.268"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_4130/Tensile_test_3> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Steel_4130"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Steel_4130/Tensile_test_3.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Steel_4130/Tensile_test_3.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_4130> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "50.0"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.25"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "13.523"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "32.806999999999995"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "365.91693"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "251.29129"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "122.817"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin/Tensile_test_1> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Unknown_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Unknown_Resin/Tensile_test_1.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Unknown_Resin/Tensile_test_1.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "15.168999999999999"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "9.15509"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "8.94795"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.068"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin/Tensile_test_2> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Unknown_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Unknown_Resin/Tensile_test_2.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Unknown_Resin/Tensile_test_2.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "32.168"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "9.7204"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "4.08523"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.074"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin/Tensile_test_3> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Unknown_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Unknown_Resin/Tensile_test_3.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Unknown_Resin/Tensile_test_3.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "35.294"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "11.61541"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "2.5351"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.001"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin/Tensile_test_4> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Unknown_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Unknown_Resin/Tensile_test_4.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Unknown_Resin/Tensile_test_4.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "22.25"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "9.42679"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "4.53355"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.061"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin/Tensile_test_5> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Unknown_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Unknown_Resin/Tensile_test_5.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Unknown_Resin/Tensile_test_5.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "23.462"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "9.40218"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "4.4894"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.067"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin/Tensile_test_6> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Unknown_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Unknown_Resin/Tensile_test_6.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Unknown_Resin/Tensile_test_6.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "11.881"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "9.82062"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "0.6979"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.078"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin/Tensile_test_7> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Unknown_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Unknown_Resin/Tensile_test_7.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Unknown_Resin/Tensile_test_7.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "25.35"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "9.94204"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "9.46409"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.066"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin/Tensile_test_8> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "Unknown_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/Unknown_Resin/Tensile_test_8.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/Unknown_Resin/Tensile_test_8.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "15.728"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "8.55273"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "4.79505"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.053"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin/Tensile_test_1> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "V4_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/V4_Resin/Tensile_test_1.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/V4_Resin/Tensile_test_1.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "42.757"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "35.3248"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "10.76882"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.203"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin/Tensile_test_10> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "V4_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/V4_Resin/Tensile_test_10.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/V4_Resin/Tensile_test_10.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "24.061"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "15.8868"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "15.26822"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.175"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin/Tensile_test_2> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "V4_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/V4_Resin/Tensile_test_2.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/V4_Resin/Tensile_test_2.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "47.391"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "34.75866"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "34.20061"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.134"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin/Tensile_test_3> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "V4_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/V4_Resin/Tensile_test_3.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/V4_Resin/Tensile_test_3.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "59.477000000000004"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "33.68717"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "32.22953"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.132"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin/Tensile_test_4> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "V4_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/V4_Resin/Tensile_test_4.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/V4_Resin/Tensile_test_4.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "31.659"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "74.24561"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "73.1318"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.239"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin/Tensile_test_5> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "V4_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/V4_Resin/Tensile_test_5.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/V4_Resin/Tensile_test_5.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "28.963"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "75.57594"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "19.66271"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.222"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin/Tensile_test_6> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "V4_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/V4_Resin/Tensile_test_6.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/V4_Resin/Tensile_test_6.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "30.871"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "71.06304"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "11.36495"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.215"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin/Tensile_test_7> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "V4_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/V4_Resin/Tensile_test_7.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/V4_Resin/Tensile_test_7.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "32.808"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "72.5026"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "30.32576"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.374"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin/Tensile_test_8> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "V4_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/V4_Resin/Tensile_test_8.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/V4_Resin/Tensile_test_8.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "32.059"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "68.86774"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "20.32614"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.333"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin/Tensile_test_9> a core:MechanicalTestingProcess,
+        tto:TensileTest ;
+    core:MaterialDesignation "V4_Resin"^^xsd:string ;
+    core:PrimaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/PrimaryData/V4_Resin/Tensile_test_9.csv"^^xsd:string ;
+    core:SecondaryData "https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/SecondaryData/V4_Resin/Tensile_test_9.csv"^^xsd:string ;
+    core:isPartOf <https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin> ;
+    tto:OriginalGaugeLength [ a core:ValueObject ;
+            rdf:value "9.53"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalThickness [ a core:ValueObject ;
+            rdf:value "3.21"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:OriginalWidth [ a core:ValueObject ;
+            rdf:value "3.24"^^xsd:float ;
+            core:unit <mm> ] ;
+    tto:PercentageExtension [ a core:ValueObject ;
+            rdf:value "24.318"^^xsd:float ;
+            core:unit <%> ] ;
+    tto:UltimateTensileStrength [ a core:ValueObject ;
+            rdf:value "16.40129"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YieldStrength [ a core:ValueObject ;
+            rdf:value "16.3891"^^xsd:float ;
+            core:unit <MPa> ] ;
+    tto:YoungsModulus [ a core:ValueObject ;
+            rdf:value "0.153"^^xsd:float ;
+            core:unit <MPa> ] .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_4130> a core:Material ;
+    core:MaterialDesignation "Steel_4130"^^xsd:string .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Aluminium_6061> a core:Material ;
+    core:MaterialDesignation "Aluminium_6061"^^xsd:string .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Brass> a core:Material ;
+    core:MaterialDesignation "Brass"^^xsd:string .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Steel_1018> a core:Material ;
+    core:MaterialDesignation "Steel_1018"^^xsd:string .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/Unknown_Resin> a core:Material ;
+    core:MaterialDesignation "Unknown_Resin"^^xsd:string .
+
+<https://github.com/Wino1301/MaRCN_Tensile_Ontology/tree/main/data/ReportRaw/V4_Resin> a core:Material ;
+    core:MaterialDesignation "V4_Resin"^^xsd:string .
+

@@ -5,22 +5,25 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a sh:NodeShape ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:minCount 1 ;
-            sh:path core:SecondaryData ],
-        [ sh:minCount 1 ;
+    sh:property [ sh:minCount 1 ;
             sh:node [ a sh:NodeShape ;
                     sh:property [ sh:datatype xsd:float ;
                             sh:minCount 1 ;
                             sh:minInclusive "0"^^xsd:float ;
                             sh:path rdf:value ],
-                        [ sh:hasValue <https://w3id.org/pmd/co/unit#percent> ;
+                        [ sh:hasValue <mm> ;
                             sh:minCount 1 ;
                             sh:path core:unit ] ] ;
-            sh:path tto:PercentageExtension ],
+            sh:path tto:OriginalGaugeLength ],
+        [ sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path core:PrimaryData ],
+        [ sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:path core:SecondaryData ],
         [ sh:minCount 1 ;
             sh:node [ a sh:NodeShape ;
-                    sh:property [ sh:hasValue <https://w3id.org/pmd/co/unit#MPa> ;
+                    sh:property [ sh:hasValue <MPa> ;
                             sh:minCount 1 ;
                             sh:path core:unit ],
                         [ sh:datatype xsd:float ;
@@ -30,7 +33,17 @@
             sh:path tto:UltimateTensileStrength ],
         [ sh:minCount 1 ;
             sh:node [ a sh:NodeShape ;
-                    sh:property [ sh:hasValue <https://w3id.org/pmd/co/unit#mm> ;
+                    sh:property [ sh:datatype xsd:float ;
+                            sh:minCount 1 ;
+                            sh:minInclusive "0"^^xsd:float ;
+                            sh:path rdf:value ],
+                        [ sh:hasValue <%> ;
+                            sh:minCount 1 ;
+                            sh:path core:unit ] ] ;
+            sh:path tto:PercentageExtension ],
+        [ sh:minCount 1 ;
+            sh:node [ a sh:NodeShape ;
+                    sh:property [ sh:hasValue <mm> ;
                             sh:minCount 1 ;
                             sh:path core:unit ],
                         [ sh:datatype xsd:float ;
@@ -38,51 +51,38 @@
                             sh:minInclusive "0"^^xsd:float ;
                             sh:path rdf:value ] ] ;
             sh:path tto:OriginalWidth ],
-        [ sh:minCount 1 ;
-            sh:node [ a sh:NodeShape ;
-                    sh:property [ sh:hasValue <https://w3id.org/pmd/co/unit#MPa> ;
-                            sh:minCount 1 ;
-                            sh:path core:unit ],
-                        [ sh:datatype xsd:float ;
-                            sh:minCount 1 ;
-                            sh:minInclusive "0"^^xsd:float ;
-                            sh:path rdf:value ] ] ;
-            sh:path tto:YoungsModulus ],
-        [ sh:minCount 1 ;
-            sh:node [ a sh:NodeShape ;
-                    sh:property [ sh:hasValue <https://w3id.org/pmd/co/unit#mm> ;
-                            sh:minCount 1 ;
-                            sh:path core:unit ],
-                        [ sh:datatype xsd:float ;
-                            sh:minCount 1 ;
-                            sh:minInclusive "0"^^xsd:float ;
-                            sh:path rdf:value ] ] ;
-            sh:path tto:OriginalGaugeLength ],
-        [ sh:minCount 1 ;
-            sh:node [ a sh:NodeShape ;
-                    sh:property [ sh:datatype xsd:float ;
-                            sh:minCount 1 ;
-                            sh:minInclusive "0"^^xsd:float ;
-                            sh:path rdf:value ],
-                        [ sh:hasValue <https://w3id.org/pmd/co/unit#mm> ;
-                            sh:minCount 1 ;
-                            sh:path core:unit ] ] ;
-            sh:path tto:OriginalThickness ],
         [ sh:datatype xsd:string ;
             sh:minCount 1 ;
             sh:path core:MaterialDesignation ],
-        [ sh:datatype xsd:string ;
-            sh:minCount 1 ;
-            sh:path core:PrimaryData ],
         [ sh:minCount 1 ;
             sh:node [ a sh:NodeShape ;
                     sh:property [ sh:datatype xsd:float ;
                             sh:minCount 1 ;
                             sh:minInclusive "0"^^xsd:float ;
                             sh:path rdf:value ],
-                        [ sh:hasValue <https://w3id.org/pmd/co/unit#MPa> ;
+                        [ sh:hasValue <MPa> ;
                             sh:minCount 1 ;
                             sh:path core:unit ] ] ;
-            sh:path tto:YieldStrength ] ;
-    sh:targetClass tto:TensileTest .
+            sh:path tto:YieldStrength ],
+        [ sh:minCount 1 ;
+            sh:node [ a sh:NodeShape ;
+                    sh:property [ sh:hasValue <mm> ;
+                            sh:minCount 1 ;
+                            sh:path core:unit ],
+                        [ sh:datatype xsd:float ;
+                            sh:minCount 1 ;
+                            sh:minInclusive "0"^^xsd:float ;
+                            sh:path rdf:value ] ] ;
+            sh:path tto:OriginalThickness ],
+        [ sh:minCount 1 ;
+            sh:node [ a sh:NodeShape ;
+                    sh:property [ sh:hasValue <MPa> ;
+                            sh:minCount 1 ;
+                            sh:path core:unit ],
+                        [ sh:datatype xsd:float ;
+                            sh:minCount 1 ;
+                            sh:minInclusive "0"^^xsd:float ;
+                            sh:path rdf:value ] ] ;
+            sh:path tto:YoungsModulus ] ;
+    sh:targetClass core:MechanicalTestingProcess .
 
